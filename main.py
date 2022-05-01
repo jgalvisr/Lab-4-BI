@@ -6,6 +6,9 @@ from PredictionModel import Model
 
 app = FastAPI()
 
+@app.get("/")
+def default():
+    return "Welcome to the country life expectancy API!"
 
 @app.post("/predict")
 def make_predictions(data_model: XDataModel):
